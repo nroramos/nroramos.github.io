@@ -1,17 +1,40 @@
-// App.vue
 <template>
   <div id="app">
-    <ProfeForm />
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <router-link to="/home" class="navbar-item">Inicio</router-link>
+        </div>
+      <div class="navbar-end">
+        <router-link to="/form" class="navbar-item">Registro</router-link>
+      </div>
+      </nav>
+    </header>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import ProfeForm from './components/ProfeForm.vue'
-
-export default {
-  name: 'app',
-  components: {
-    ProfeForm
+  export default {
+    name: 'app'
   }
-}
 </script>
+
+<style>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #eee;
+  }
+  .navbar {
+    background: #4285f4;
+    color: white;
+  }
+  .navbar-item, .navbar-link {
+    color: white;
+  }
+  a {
+    color: white;
+  }
+</style>
